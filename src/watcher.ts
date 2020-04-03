@@ -7,7 +7,7 @@ interface WatcherOptions {
   callback?: watchCallback
 }
 
-export default class Watch {
+export default class Watcher {
   getter: Function
   computed: boolean
   value: any
