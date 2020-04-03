@@ -25,8 +25,8 @@ const targetStack: Watcher[] = []
 export function pushTarget(currentTarget: Watcher) {
   if (Dep.target) {
     targetStack.push(Dep.target)
-    Dep.target = currentTarget
   }
+  Dep.target = currentTarget
 }
 
 export function popTarget() {

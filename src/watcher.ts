@@ -15,7 +15,7 @@ export default class Watch {
   callback?: watchCallback
   dep?: Dep
 
-  constructor(getter: Function, options: WatcherOptions) {
+  constructor(getter: Function, options: WatcherOptions = {}) {
     const { computed = false, watch = false, callback } = options
 
     this.getter = getter
@@ -51,9 +51,7 @@ export default class Watch {
       const oldValue = this.value
       this.get()
       if (this.callback) {
-        {
-          this.callback(this.value, oldValue)
-        }
+        this.callback(this.value, oldValue)
       }
     } else {
       this.get()
