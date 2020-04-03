@@ -4,7 +4,9 @@
   "description": "Vue 2.x simple reactive",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --config webpack/webpack.dev.js",
+    "build": "rm -rf docs && webpack --config webpack/webpack.prod.js"
   },
   "repository": {
     "type": "git",
